@@ -1,0 +1,15 @@
+<h1>color</h1>
+
+<div [style.backgroundColor]="bgc">Color</div>
+
+<input
+  (change)="changeColor(myInputColor.value)"
+  #myInputColor
+  type="color"
+  class="form-control"
+/>
+<input [(ngModel)]="bgc" type="color" class="form-control" />
+
+<button (click)="changeColor(defaultColor)" class="btn btn-danger">
+  Reset color
+</button>
