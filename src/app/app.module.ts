@@ -11,6 +11,12 @@ import { BindingExampleComponent } from './components/binding-example/binding-ex
 import { ColorComponent } from './components/color/color.component';
 import { TwoComponent } from './components/two/two.component';
 import { CardComponent } from './components/card/card.component';
+import { InteractionComponent } from './components/interaction/interaction.component';
+import { PereComponent } from './components/pere/pere.component';
+import { CvComponent } from './cv/cv/cv.component';
+import { ListComponent } from './cv/list/list.component';
+import { CardDetailComponent } from './cv/card-detail/card-detail.component';
+import { ItemComponent } from './cv/item/item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { CardComponent } from './components/card/card.component';
     BindingExampleComponent,
     ColorComponent,
     TwoComponent,
-    CardComponent
+    CardComponent,
+    InteractionComponent,
+    PereComponent,
+    CvComponent,
+    ListComponent,
+    CardDetailComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
