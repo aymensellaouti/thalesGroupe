@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { Cv } from '../model/cv.model';
 
 @Component({
@@ -6,9 +12,10 @@ import { Cv } from '../model/cv.model';
   templateUrl: './card-detail.component.html',
   styleUrls: ['./card-detail.component.css'],
 })
-export class CardDetailComponent implements OnInit {
+export class CardDetailComponent implements OnInit, OnChanges {
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('changes :', changes);
+  }
   @Input() cv: Cv = null;
-  constructor() {}
-
   ngOnInit(): void {}
 }

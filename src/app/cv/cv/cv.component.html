@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col">
-    <app-list></app-list>
+    <app-list (forwardSelectedCv)="getSelectedCv($event)"></app-list>
   </div>
   <div class="col">
-    <app-card-detail></app-card-detail>
+    <!-- afficherLeCv(cv)
+        afficherrLeCv(selectedCv)
+    -->
+    <app-card-detail [cv]="selectedCv"></app-card-detail>
   </div>
 </div>
