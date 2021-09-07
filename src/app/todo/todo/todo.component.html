@@ -5,7 +5,9 @@
         {{ todo.name }} : {{ todo.content }}
         <i
           (click)="deleteTodo(todo)"
-          class="fa fa-trash fa-2x" aria-hidden="true"></i>
+          class="fa fa-trash fa-2x"
+          aria-hidden="true"
+        ></i>
       </li>
     </ol>
   </div>
@@ -17,6 +19,12 @@
     <button
       (click)="addTodo()"
       [disabled]="!todo.name.trim() || !todo.content.trim()"
-      class="btn btn-primary mt-2">Add Todo</button>
+      class="btn btn-primary mt-2"
+    >
+      Add Todo
+    </button>
   </div>
 </div>
+<!-- <div class="row">
+  <app-cv></app-cv>
+</div> -->

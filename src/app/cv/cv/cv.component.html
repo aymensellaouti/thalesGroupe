@@ -1,9 +1,8 @@
 <div class="row">
   <div class="col">
     <div class="alert alert-primary">
-      Il est {{ date  | date : 'short' | uppercase }}
-      1 btc est égale à : {{1 | usdBtc : 0 | currency}}
-      1 usd est égale à : {{1 | usdBtc}}
+      Il est {{ date | date: "short" | uppercase }} 1 btc est égale à :
+      {{ 1 | usdBtc: 0 | currency }} 1 usd est égale à : {{ 1 | usdBtc }}
     </div>
     <app-list (forwardSelectedCv)="getSelectedCv($event)"></app-list>
   </div>
@@ -14,3 +13,4 @@
     <app-card-detail [cv]="selectedCv"></app-card-detail>
   </div>
 </div>
+

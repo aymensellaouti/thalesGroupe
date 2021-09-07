@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Logger } from 'src/app/services/logger.service';
+/* import { Logger } from 'src/app/services/logger.service'; */
 import { Cv } from '../model/cv.model';
-import { UtilsService } from '../../services/utils.service';
+/* import { UtilsService } from '../../services/utils.service'; */
 import { ToastrService } from 'ngx-toastr';
+/* import { TodoService } from '../../todo/todo.service'; */
 
 @Component({
   selector: 'app-cv',
@@ -13,9 +14,10 @@ export class CvComponent implements OnInit {
   selectedCv: Cv = null;
   date = new Date();
   constructor(
-    private loggerService: Logger,
-    private utilsService: UtilsService,
-    private toastr: ToastrService
+/*     private loggerService: Logger,
+    private utilsService: UtilsService, */
+    private toastr: ToastrService,
+/*     private todoService: TodoService */
   ) {}
 
   ngOnInit(): void {
@@ -23,7 +25,8 @@ export class CvComponent implements OnInit {
   }
   getSelectedCv(cv: Cv): void {
     this.selectedCv = cv;
-    this.loggerService.logger(cv);
+/*     this.loggerService.logger(cv);
     this.utilsService.sayHello();
+    this.todoService.loggerTodo(); */
   }
 }
