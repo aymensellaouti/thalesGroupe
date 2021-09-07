@@ -1,6 +1,16 @@
 <div
-  [ngClass]= "{
-    'allumee': isAllumee,
-    'eteinte': !isAllumee
+  [ngClass]="{
+    allumee: isAllumee,
+    eteinte: !isAllumee
   }"
->Ampoule</div>
+>
+  Ampoule
+</div>
+
+<div appHighlight>cc custom directive</div>
+<p appHighlight
+  [in]="'green'"
+  [out]="'pink'"
+>
+cc custom directive 2
+</p>
