@@ -23,6 +23,7 @@ import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { NgIfTestComponent } from './directives/ng-if-test/ng-if-test.component';
+import { UsdBtcPipe } from './pipes/usd-btc.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { NgIfTestComponent } from './directives/ng-if-test/ng-if-test.component'
     NgClassComponent,
     HighlightDirective,
     RainbowDirective,
-    NgIfTestComponent
+    NgIfTestComponent,
+    UsdBtcPipe
   ],
   imports: [
     BrowserModule,

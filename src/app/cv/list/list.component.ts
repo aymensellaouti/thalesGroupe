@@ -17,7 +17,7 @@ export class ListComponent implements OnInit {
         'aymen',
         39,
         'teacher',
-        'rotating_card_profile3.png',
+        '',
         123456
       ),
       new Cv(

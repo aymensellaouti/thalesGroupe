@@ -1,6 +1,4 @@
-<div
-  (click)="selectCv()"
->
+<div (click)="selectCv()">
   <img
     src="assets/images/{{ cv?.path }}"
     class="rounded-circle"
@@ -8,4 +6,5 @@
     height="50px"
   />
   {{ cv?.name }} {{ cv?.firstname }}
+  <!--   {{ cv | json }} -->
 </div>
