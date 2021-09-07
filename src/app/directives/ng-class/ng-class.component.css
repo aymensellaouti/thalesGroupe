@@ -1,0 +1,13 @@
+.allumee {
+  background-color: yellow;
+}
+.eteinte {
+  background-color: black;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  padding: 50px;
+  border: 1px solid black;
+}

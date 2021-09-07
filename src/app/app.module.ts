@@ -19,6 +19,7 @@ import { CardDetailComponent } from './cv/card-detail/card-detail.component';
 import { ItemComponent } from './cv/item/item.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
+import { NgClassComponent } from './directives/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
     CardDetailComponent,
     ItemComponent,
     NgStyleComponent,
-    MiniWordComponent
+    MiniWordComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
