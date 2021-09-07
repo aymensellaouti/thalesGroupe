@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -25,6 +28,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { NgIfTestComponent } from './directives/ng-if-test/ng-if-test.component';
 import { UsdBtcPipe } from './pipes/usd-btc.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { Logger } from './services/logger.service';
+
 
 @NgModule({
   declarations: [
@@ -53,9 +58,13 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
+  providers: [
+    Logger
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
