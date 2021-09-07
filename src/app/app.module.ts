@@ -29,6 +29,7 @@ import { NgIfTestComponent } from './directives/ng-if-test/ng-if-test.component'
 import { UsdBtcPipe } from './pipes/usd-btc.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { Logger } from './services/logger.service';
+import { TodoComponent } from './todo/todo/todo.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { Logger } from './services/logger.service';
     RainbowDirective,
     NgIfTestComponent,
     UsdBtcPipe,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
