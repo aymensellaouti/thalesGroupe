@@ -28,7 +28,7 @@ export class ListComponent implements OnInit {
         'Dev',
         'rotating_card_profile.png',
         8547854
-      ),
+      )
     ];
   }
 

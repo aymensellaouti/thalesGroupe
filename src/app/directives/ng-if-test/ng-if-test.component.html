@@ -1,0 +1,5 @@
+<p [hidden]="!isVisibale">avec Hidden</p>
+
+<p *ngIf="isVisibale">Avec ngIf</p>
+
+<button (click)="toggle()" class="btn btn-warning">Toggle</button>
