@@ -33,6 +33,7 @@ import { TodoComponent } from './todo/todo/todo.component';
 import { EmbaucheComponent } from './embauche/components/embauche/embauche.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { RouterSimulatorComponent } from './components/router-simulator/router-s
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    DetailCvComponent
   ],
   imports: [
     BrowserModule,

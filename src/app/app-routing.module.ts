@@ -9,10 +9,13 @@ import { SecondComponent } from './components/second/second.component';
 
 const routes: Routes = [
   { path: '', component: TwoComponent },
+
   { path: 'cv', component: CvComponent },
-/*   { path: 'cv/add', component: SecondComponent }, */
+  /*   { path: 'cv/add', component: SecondComponent }, */
   { path: 'todo', component: TodoComponent },
-  { path: 'color', component: ColorComponent },
+  { path: ':var', component: SecondComponent },
+  /*   { path: 'color', component: ColorComponent }, */
+  { path: 'color/:favoriteColor', component: ColorComponent },
 ];
 
 @NgModule({
