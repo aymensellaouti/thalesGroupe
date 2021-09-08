@@ -10,6 +10,7 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 import { BackComponent } from './templates/back/back.component';
 import { FrontComponent } from './templates/front/front.component';
 import { NF404Component } from './components/nf404/nf404.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'cv', pathMatch: 'full' },
@@ -32,6 +33,7 @@ const routes: Routes = [
   },
   /*   { path: 'cv/add', component: SecondComponent }, */
   { path: 'todo', component: TodoComponent },
+  { path: 'login', component: LoginComponent },
   { path: ':var', component: SecondComponent },
   /*   { path: 'color', component: ColorComponent }, */
   { path: 'color/:favoriteColor', component: ColorComponent },
