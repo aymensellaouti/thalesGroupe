@@ -18,12 +18,14 @@ export class DetailCvComponent implements OnInit {
     private toastr: ToastrService
   ) {}
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
+    this.activatedRoute.params.subscribe(
+      (params) => {
       this.cv = this.cvService.findCvById(+params.id);
       if (!this.cv) {
         this.router.navigate(['/cv']);
       }
-    });
+    }
+    );
   }
   deletePersonne() {
     if (this.cvService.deleteCv(this.cv)) {
