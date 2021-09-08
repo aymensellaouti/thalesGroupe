@@ -1,9 +1,13 @@
 <div (click)="selectCv()">
   <img
     src="assets/images/{{ cv?.path | defaultImage }}"
-    class="rounded-circle"
-    width="50px"
-    height="50px"
+    [ngClass]="{
+      'rounded-circle': isRounded
+    }"
+    [ngStyle]="{
+      width: size +'px',
+      heigth: size + 'px'
+    }"
   />
   {{ cv?.name | titlecase }} {{ cv?.firstname | titlecase }}
   <!--   {{ cv | json }} -->

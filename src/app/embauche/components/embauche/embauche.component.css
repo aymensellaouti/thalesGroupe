@@ -1,0 +1,6 @@
+.embauches {
+  border: 2px solid rgb(20, 185, 226);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+}

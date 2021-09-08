@@ -30,6 +30,7 @@ import { UsdBtcPipe } from './pipes/usd-btc.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { Logger } from './services/logger.service';
 import { TodoComponent } from './todo/todo/todo.component';
+import { EmbaucheComponent } from './embauche/components/embauche/embauche.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { TodoComponent } from './todo/todo/todo.component';
     NgIfTestComponent,
     UsdBtcPipe,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,
