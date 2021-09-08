@@ -8,6 +8,7 @@ import {
 import { Cv } from '../model/cv.model';
 import { EmbaucheService } from '../../embauche/services/embauche.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-detail',
@@ -18,6 +19,7 @@ export class CardDetailComponent implements OnInit, OnChanges {
   constructor(
     private embaucheService: EmbaucheService,
     private toastr: ToastrService,
+    private router: Router
   ) {}
   ngOnChanges(changes: SimpleChanges): void {
     console.log('changes :', changes);
@@ -26,9 +28,16 @@ export class CardDetailComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
   embaucher(): void {
     if (this.embaucheService.embaucher(this.cv)) {
-      this.toastr.success(`Le cv de ${this.cv.firstname} ${this.cv.name} a été préselectionné`);
+      this.toastr.success(
+        `Le cv de ${this.cv.firstname} ${this.cv.name} a été préselectionné`
+      );
     } else {
-      this.toastr.warning(`${this.cv.firstname} ${this.cv.name} est déjà préselectionné`);
+      this.toastr.warning(
+        `${this.cv.firstname} ${this.cv.name} est déjà préselectionné`
+      );
     }
+  }
+  detailsCv() {
+    this.router.navigate(['/cv', this.cv.id]);
   }
 }

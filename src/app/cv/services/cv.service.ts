@@ -19,4 +19,11 @@ export class CvService {
   findCvById(id: number): Cv {
     return this.cvs.find((cv) => cv.id === id);
   }
+  deleteCv(cv: Cv): boolean {
+    const index = this.cvs.indexOf(cv);
+    if (index === -1)
+      return false;
+    this.cvs.splice(index, 1);
+    return true;
+  }
 }

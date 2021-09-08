@@ -34,6 +34,8 @@ import { EmbaucheComponent } from './embauche/components/embauche/embauche.compo
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
+import { FrontComponent } from './templates/front/front.component';
+import { BackComponent } from './templates/back/back.component';
 
 
 @NgModule({
@@ -63,7 +65,9 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
     EmbaucheComponent,
     HeaderComponent,
     RouterSimulatorComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    FrontComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
