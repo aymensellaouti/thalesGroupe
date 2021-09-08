@@ -31,6 +31,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { Logger } from './services/logger.service';
 import { TodoComponent } from './todo/todo/todo.component';
 import { EmbaucheComponent } from './embauche/components/embauche/embauche.component';
+import { HeaderComponent } from './components/header/header.component';
+import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { EmbaucheComponent } from './embauche/components/embauche/embauche.compo
     UsdBtcPipe,
     DefaultImagePipe,
     TodoComponent,
-    EmbaucheComponent
+    EmbaucheComponent,
+    HeaderComponent,
+    RouterSimulatorComponent
   ],
   imports: [
     BrowserModule,
