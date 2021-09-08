@@ -6,11 +6,12 @@ import { ColorComponent } from './components/color/color.component';
 import { TwoComponent } from './components/two/two.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 
 const routes: Routes = [
   { path: '', component: TwoComponent },
-
   { path: 'cv', component: CvComponent },
+  { path: 'cv/:id', component: DetailCvComponent },
   /*   { path: 'cv/add', component: SecondComponent }, */
   { path: 'todo', component: TodoComponent },
   { path: ':var', component: SecondComponent },

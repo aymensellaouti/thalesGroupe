@@ -1,14 +1,14 @@
-<!-- <div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center">
   <div class="col-lg-8 push-lg-4">
     <div class="tab-content p-b-3">
       <div class="tab-pane active" id="profile">
-        <h4 class="m-y-2">Cv {{ personne.firstname }} {{ personne.name }}</h4>
+        <h4 class="m-y-2">Cv {{ cv?.firstname }} {{ cv?.name }}</h4>
         <div class="d-flex justify-content-center">
           <img
             width="150px"
             height="150px"
             class="rounded-circle align-content-center"
-            src="assets/images/{{ personne.path | defaultImage }}"
+            src="assets/images/{{ cv?.path | defaultImage }}"
             alt=""
           />
         </div>
@@ -21,29 +21,26 @@
             <table class="table table-hover table-striped">
               <tbody>
                 <tr>
-                  <td><strong>Name</strong> {{ personne?.name }}</td>
+                  <td><strong>Name</strong> {{ cv?.name }}</td>
                 </tr>
                 <tr>
-                  <td><strong>Firstname</strong> {{ personne?.firstname }}</td>
+                  <td><strong>Firstname</strong> {{ cv?.firstname }}</td>
                 </tr>
                 <tr>
-                  <td><strong>Job</strong> {{ personne?.job }}</td>
+                  <td><strong>Job</strong> {{ cv?.job }}</td>
                 </tr>
                 <tr>
-                  <td><strong>Age</strong> {{ personne?.age }}</td>
+                  <td><strong>Age</strong> {{ cv?.age }}</td>
                 </tr>
                 <tr>
-                  <td><strong>Cin</strong> {{ personne?.cin }}</td>
+                  <td><strong>Cin</strong> {{ cv?.cin }}</td>
                 </tr>
               </tbody>
             </table>
             <div class="d-flex justify-content-center">
-              <button
-                (click)="deletePersonne()"
-                class="btn btn-danger"
-              >
+              <!--               <button (click)="deletePersonne()" class="btn btn-danger">
                 Delete
-              </button>
+              </button> -->
             </div>
           </div>
         </div>
@@ -51,4 +48,3 @@
     </div>
   </div>
 </div>
- -->

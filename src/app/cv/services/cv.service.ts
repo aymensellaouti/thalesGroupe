@@ -10,10 +10,13 @@ export class CvService {
     this.cvs = [
       new Cv(1, 'sellaouti', 'aymen', 39, 'teacher', 'as.jpg', 123456),
       new Cv(2, 'Kemehlo', 'estelle', 20, 'Dev', '', 8547854),
-      new Cv(2, 'Godart', 'Quentin', 20, 'Dev', '              ', 1111111),
+      new Cv(3, 'Godart', 'Quentin', 20, 'Dev', '              ', 1111111),
     ];
   }
   getCvs(): Cv[] {
     return this.cvs;
+  }
+  findCvById(id: number): Cv {
+    return this.cvs.find((cv) => cv.id === id);
   }
 }
