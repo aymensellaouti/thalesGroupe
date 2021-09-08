@@ -9,25 +9,33 @@ import { SecondComponent } from './components/second/second.component';
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 import { BackComponent } from './templates/back/back.component';
 import { FrontComponent } from './templates/front/front.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 const routes: Routes = [
-  { path: '', component: TwoComponent },
-  { path: 'back', component: BackComponent, children: [
-    {path: 'first', component: FirstComponent}
-  ]
+  { path: '', redirectTo: 'cv', pathMatch: 'full' },
+  {
+    path: 'back',
+    component: BackComponent,
+    children: [{ path: 'first', component: FirstComponent }],
   },
-  { path: 'front', component: FrontComponent, children: [
-    {path: 'second', component: SecondComponent}
-  ] },
-  { path: 'cv', children: [
-    { path: '', component: CvComponent },
-    { path: ':id', component: DetailCvComponent },
-  ]},
+  {
+    path: 'front',
+    component: FrontComponent,
+    children: [{ path: 'second', component: SecondComponent }],
+  },
+  {
+    path: 'cv',
+    children: [
+      { path: '', component: CvComponent },
+      { path: ':id', component: DetailCvComponent },
+    ],
+  },
   /*   { path: 'cv/add', component: SecondComponent }, */
   { path: 'todo', component: TodoComponent },
   { path: ':var', component: SecondComponent },
   /*   { path: 'color', component: ColorComponent }, */
   { path: 'color/:favoriteColor', component: ColorComponent },
+  { path: '**', component: NF404Component },
 ];
 
 @NgModule({

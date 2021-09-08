@@ -36,6 +36,7 @@ import { RouterSimulatorComponent } from './components/router-simulator/router-s
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 import { FrontComponent } from './templates/front/front.component';
 import { BackComponent } from './templates/back/back.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { BackComponent } from './templates/back/back.component';
     RouterSimulatorComponent,
     DetailCvComponent,
     FrontComponent,
-    BackComponent
+    BackComponent,
+    NF404Component
   ],
   imports: [
     BrowserModule,
