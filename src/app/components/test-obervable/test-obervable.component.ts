@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class TestObervableComponent implements OnInit {
   constructor(private tostr: ToastrService) {
-    const observable = new Observable((observer) => {
+    const observable = new Observable<number>((observer) => {
       let i = 5;
       setInterval(() => {
         if (!i) {

@@ -40,6 +40,7 @@ import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/form/test-form/test-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TestObervableComponent } from './components/test-obervable/test-obervable.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { TestObervableComponent } from './components/test-obervable/test-obervab
     NF404Component,
     TestFormComponent,
     LoginComponent,
-    TestObervableComponent
+    TestObervableComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
