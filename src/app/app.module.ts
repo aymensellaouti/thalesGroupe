@@ -43,6 +43,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { TestObervableComponent } from './components/test-obervable/test-obervable.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TestHttpComponent } from './components/test-http/test-http.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { TestHttpComponent } from './components/test-http/test-http.component';
     LoginComponent,
     TestObervableComponent,
     SliderComponent,
-    TestHttpComponent
+    TestHttpComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
