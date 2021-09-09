@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CvService } from '../services/cv.service';
 import { Cv } from '../model/cv.model';
 import { ToastrService } from 'ngx-toastr';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-detail-cv',
@@ -28,11 +29,16 @@ export class DetailCvComponent implements OnInit {
     });
   }
   deletePersonne() {
-    if (this.cvService.deleteCv(this.cv)) {
-      this.toastr.success(
-        `Le cv de ${this.cv.name} a été supprimé avec succès`
-      );
-      this.router.navigate(['cv']);
-    }
+    this.cvService.deleteCv(this.cv.id).subscribe(
+      (ok) => {
+        this.toastr.success(
+          `Le cv de ${this.cv.name} a été supprimé avec succès`
+        );
+        this.router.navigate(['cv']);
+      },
+      (erreur: HttpErrorResponse) => {
+        this.toastr.error(erreur.message);
+      }
+    );
   }
 }

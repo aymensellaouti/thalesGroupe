@@ -1,4 +1,3 @@
-<!-- 
 <form #formumaire="ngForm">
   <label for="name">Name</label>
   <input required id="name" type="text" ngModel name="name" class="form-control">
@@ -18,7 +17,7 @@
   <label for="path">Path</label>
   <input id="path" type="text" ngModel name="path" class="form-control">
 
-  <button [disabled]="formumaire.invalid" (click)="addCv(formumaire)" class="btn btn-primary">Envoyer</button>
+  <button [disabled]="formumaire.invalid" (click)="addCv(formumaire.value)" class="btn btn-primary">Envoyer</button>
 
 </form>
- -->
+

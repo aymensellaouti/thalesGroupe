@@ -43,7 +43,12 @@
       Veuillez saisir un mot de passe de taille 4 caractères minimum.
     </div>
   </div>
-  <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">
+  <button
+    (click)="login(loginForm.value)"
+    [disabled]="loginForm.invalid"
+    type="submit"
+    class="btn btn-primary"
+  >
     Submit
   </button>
 </form>
