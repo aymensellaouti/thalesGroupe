@@ -29,7 +29,6 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { NgIfTestComponent } from './directives/ng-if-test/ng-if-test.component';
 import { UsdBtcPipe } from './pipes/usd-btc.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
-import { Logger } from './services/logger.service';
 import { TodoComponent } from './todo/todo/todo.component';
 import { EmbaucheComponent } from './embauche/components/embauche/embauche.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -44,6 +43,8 @@ import { TestObervableComponent } from './components/test-obervable/test-obervab
 import { SliderComponent } from './components/slider/slider.component';
 import { TestHttpComponent } from './components/test-http/test-http.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+
+import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
 
 
 @NgModule({
@@ -93,7 +94,7 @@ import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
     ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
-    Logger
+    AuthInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })

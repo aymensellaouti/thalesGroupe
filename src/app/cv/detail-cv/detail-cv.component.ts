@@ -4,6 +4,7 @@ import { CvService } from '../services/cv.service';
 import { Cv } from '../model/cv.model';
 import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
+import { AuthService } from '../../auth/services/auth.service';
 
 @Component({
   selector: 'app-detail-cv',
@@ -16,7 +17,8 @@ export class DetailCvComponent implements OnInit {
     private cvService: CvService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public authService: AuthService
   ) {}
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {

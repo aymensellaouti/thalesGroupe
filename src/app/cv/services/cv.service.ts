@@ -31,23 +31,14 @@ export class CvService {
     return this.cvs.find((cv) => cv.id === id);
   }
   findCvById(id: number): Observable<Cv> {
-    const params = new HttpParams().set('access_token', 'abc');
-    const headers = new HttpHeaders().set('Authorization', 'abc');
-    return this.http.get<Cv>(APIS.cv + id, { headers });
+    return this.http.get<Cv>(APIS.cv + id);
   }
   deleteCv(id: number): Observable<DeleteDto> {
-    const headers = new HttpHeaders().set(
-      'Authorization',
-      localStorage.getItem('token')
-    );
-    return this.http.delete<DeleteDto>(APIS.cv + id, { headers });
+
+    return this.http.delete<DeleteDto>(APIS.cv + id);
   }
   addCv(cv: Cv): Observable<Cv> {
-    const headers = new HttpHeaders().set(
-      'Authorization',
-      localStorage.getItem('token')
-    );
-    return this.http.post<Cv>(APIS.cv, cv, { headers });
+    return this.http.post<Cv>(APIS.cv, CvService);
   }
   deleteFakeCv(cv: Cv): boolean {
     const index = this.cvs.indexOf(cv);

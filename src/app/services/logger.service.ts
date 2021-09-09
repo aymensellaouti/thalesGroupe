@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FakeService } from './fake.service';
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class Logger {
   constructor(private fakeService: FakeService) {}
   logger(message: any) {
