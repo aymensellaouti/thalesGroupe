@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Cv } from '../model/cv.model';
 
 @Injectable({
@@ -6,6 +7,11 @@ import { Cv } from '../model/cv.model';
 })
 export class CvService {
   private cvs: Cv[] = [];
+  selectCvSubject = new Subject<Cv>();
+  /*   subscribe(next, error, complete) {
+    this.selectCvSubject.subscribe(next, error, complete);
+  } */
+
   constructor() {
     this.cvs = [
       new Cv(1, 'sellaouti', 'aymen', 39, 'teacher', 'as.jpg', 123456),
@@ -21,9 +27,11 @@ export class CvService {
   }
   deleteCv(cv: Cv): boolean {
     const index = this.cvs.indexOf(cv);
-    if (index === -1)
-      return false;
+    if (index === -1) return false;
     this.cvs.splice(index, 1);
     return true;
+  }
+  selectCvItem(cv: Cv): void {
+    this.selectCvSubject.next(cv);
   }
 }

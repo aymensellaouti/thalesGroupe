@@ -4,13 +4,17 @@
       Il est {{ date | date: "short" | uppercase }} 1 btc est égale à :
       {{ 1 | usdBtc: 0 | currency }} 1 usd est égale à : {{ 1 | usdBtc }}
     </div>
-    <app-list (forwardSelectedCv)="getSelectedCv($event)"></app-list>
+    <div class="alert alert-success">
+      Il y a {{nbre}} cv sélectionné
+    </div>
+<!--     (forwardSelectedCv)="getSelectedCv($event)"
+ -->    <app-list></app-list>
   </div>
   <div class="col">
     <!-- afficherLeCv(cv)
         afficherrLeCv(selectedCv)
     -->
-    <app-card-detail [cv]="selectedCv"></app-card-detail>
+    <app-card-detail></app-card-detail>
   </div>
 </div>
 <div class="row">
