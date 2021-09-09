@@ -13,8 +13,13 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
-
   login(credentials: CredentialsDto): Observable<LoginDto> {
     return this.http.post<LoginDto>(APIS.auth, credentials);
+  }
+  isAuthenticated(): boolean {
+    return !! localStorage.getItem('token');
+  }
+  logout() {
+    localStorage.removeItem('token');
   }
 }
