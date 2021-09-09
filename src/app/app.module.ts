@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -41,6 +42,7 @@ import { TestFormComponent } from './components/form/test-form/test-form.compone
 import { LoginComponent } from './pages/login/login.component';
 import { TestObervableComponent } from './components/test-obervable/test-obervable.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { TestHttpComponent } from './components/test-http/test-http.component';
 
 
 @NgModule({
@@ -77,12 +79,14 @@ import { SliderComponent } from './components/slider/slider.component';
     TestFormComponent,
     LoginComponent,
     TestObervableComponent,
-    SliderComponent
+    SliderComponent,
+    TestHttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],

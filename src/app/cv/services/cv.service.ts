@@ -11,7 +11,6 @@ export class CvService {
   /*   subscribe(next, error, complete) {
     this.selectCvSubject.subscribe(next, error, complete);
   } */
-
   constructor() {
     this.cvs = [
       new Cv(1, 'sellaouti', 'aymen', 39, 'teacher', 'as.jpg', 123456),
