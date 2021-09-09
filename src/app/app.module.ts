@@ -17,10 +17,6 @@ import { TwoComponent } from './components/two/two.component';
 import { CardComponent } from './components/card/card.component';
 import { InteractionComponent } from './components/interaction/interaction.component';
 import { PereComponent } from './components/pere/pere.component';
-import { CvComponent } from './cv/cv/cv.component';
-import { ListComponent } from './cv/list/list.component';
-import { CardDetailComponent } from './cv/card-detail/card-detail.component';
-import { ItemComponent } from './cv/item/item.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
@@ -28,12 +24,9 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { NgIfTestComponent } from './directives/ng-if-test/ng-if-test.component';
 import { UsdBtcPipe } from './pipes/usd-btc.pipe';
-import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { TodoComponent } from './todo/todo/todo.component';
-import { EmbaucheComponent } from './embauche/components/embauche/embauche.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
-import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 import { FrontComponent } from './templates/front/front.component';
 import { BackComponent } from './templates/back/back.component';
 import { NF404Component } from './components/nf404/nf404.component';
@@ -42,10 +35,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { TestObervableComponent } from './components/test-obervable/test-obervable.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TestHttpComponent } from './components/test-http/test-http.component';
-import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
-
+import { CvModule } from './cv/cv.module';
 
 @NgModule({
   declarations: [
@@ -58,10 +50,6 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
     CardComponent,
     InteractionComponent,
     PereComponent,
-    CvComponent,
-    ListComponent,
-    CardDetailComponent,
-    ItemComponent,
     NgStyleComponent,
     MiniWordComponent,
     NgClassComponent,
@@ -69,12 +57,9 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
     RainbowDirective,
     NgIfTestComponent,
     UsdBtcPipe,
-    DefaultImagePipe,
     TodoComponent,
-    EmbaucheComponent,
     HeaderComponent,
     RouterSimulatorComponent,
-    DetailCvComponent,
     FrontComponent,
     BackComponent,
     NF404Component,
@@ -83,7 +68,6 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
     TestObervableComponent,
     SliderComponent,
     TestHttpComponent,
-    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
@@ -93,9 +77,7 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [
-    AuthInterceptorProvider
-  ],
-  bootstrap: [AppComponent]
+  providers: [AuthInterceptorProvider],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

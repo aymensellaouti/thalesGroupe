@@ -34,11 +34,12 @@ export class CvService {
     return this.http.get<Cv>(APIS.cv + id);
   }
   deleteCv(id: number): Observable<DeleteDto> {
-
     return this.http.delete<DeleteDto>(APIS.cv + id);
   }
   addCv(cv: Cv): Observable<Cv> {
-    return this.http.post<Cv>(APIS.cv, CvService);
+    console.log('in add Cv', cv);
+
+    return this.http.post<Cv>(APIS.cv, cv);
   }
   deleteFakeCv(cv: Cv): boolean {
     const index = this.cvs.indexOf(cv);
